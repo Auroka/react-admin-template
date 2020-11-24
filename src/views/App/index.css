@@ -1,0 +1,25 @@
+@import '~antd/dist/antd.css';
+
+.site-layout-sider {
+  height: 100vh;
+}
+.site-layout-logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 16px;
+}
+.site-layout-header {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  background: #fff;
+}
+.trigger {
+  font-size: 18px;
+}
+.trigger:hover {
+  color: #1890ff;
+}
+.site-layout-content {
+  padding: 20px;
+}
