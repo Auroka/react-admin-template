@@ -1,0 +1,50 @@
+.btn3 {
+  position: relative;
+  min-width: 150px;
+  height: 44px;
+  padding: 0 2em;
+  color: #fff;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  z-index: 1;
+}
+.btn3 {
+  transition: all 0.3s;
+  color: #3f51b5;
+  border: 2px solid #ccffff;
+  background-color: #ccffff;
+}
+.btn3::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 40px;
+  opacity: 0;
+  color: #ccffff;
+  transition: all 0.3s;
+  transform: translate3d(0, 25%, 0);
+}
+.btn3 > span {
+  display: block;
+  transition: all 0.3s;
+  line-height: 40px;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.btn3:hover {
+  border-color: #ccffff;
+  background-color: transparent;
+}
+.btn3:hover > span {
+  opacity: 0;
+  transform: translate3d(0, -25%, 0);
+}
+.btn3:hover::after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}

@@ -1,0 +1,7 @@
+.btns-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+  background-color: #262626;
+}

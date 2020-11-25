@@ -5,8 +5,11 @@
 }
 .site-layout-logo {
   height: 32px;
+  line-height: 32px;
   background: rgba(255, 255, 255, 0.3);
   margin: 16px;
+  text-align: center;
+  color: #fff;
 }
 .site-layout-header {
   display: flex;

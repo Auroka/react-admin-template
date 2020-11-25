@@ -3,7 +3,7 @@
  * @Author: lxd
  * @Date: 2020-11-24 15:38:39
  * @LastEditors: lxd
- * @LastEditTime: 2020-11-24 17:31:35
+ * @LastEditTime: 2020-11-25 16:17:59
  */
 import React, { useState } from 'react'
 import './index.css'
@@ -12,7 +12,7 @@ import Nav from './nav'
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons'
 const { Header, Sider, Content } = Layout
 
-function App() {
+function Layouts(props) {
   const [collapsed, setCollapsed] = useState(false)
 
   const toggle = () => {
@@ -25,7 +25,7 @@ function App() {
         breakpoint="md"
         collapsed={collapsed}
       >
-        <div className="site-layout-logo"></div>
+        <div className="site-layout-logo">我是logo</div>
         <Nav></Nav>
       </Sider>
       <Layout>
@@ -48,10 +48,10 @@ function App() {
             <Breadcrumb.Item>An Application</Breadcrumb.Item>
           </Breadcrumb>
         </Header>
-        <Content className="site-layout-content">Content111</Content>
+        <Content className="site-layout-content">{props.children}</Content>
       </Layout>
     </Layout>
   )
 }
 
-export default App
+export default Layouts

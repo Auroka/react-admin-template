@@ -1,0 +1,40 @@
+.btn4 {
+  position: relative;
+  min-width: 150px;
+  height: 44px;
+  padding: 0 2em;
+  color: #262626;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  z-index: 1;
+}
+.btn4::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: inherit;
+  z-index: -1;
+  opacity: 0.8;
+}
+.btn4:hover {
+  color: #fff;
+  background: #ff7571;
+}
+.btn4:hover::before {
+  color: red;
+  animation: anim-moema 0.3s;
+}
+@keyframes anim-moema {
+  100% {
+    opacity: 0;
+    top: -20px;
+    left: -20px;
+    bottom: -20px;
+    right: -20px;
+  }
+}
