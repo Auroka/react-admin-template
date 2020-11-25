@@ -9,8 +9,9 @@
   margin: 16px;
 }
 .site-layout-header {
+  display: flex;
+  align-items: center;
   height: 50px;
-  line-height: 50px;
   padding: 0 20px;
   background: #fff;
 }

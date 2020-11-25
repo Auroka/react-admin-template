@@ -3,7 +3,7 @@
  * @Author: lxd
  * @Date: 2020-11-24 16:08:14
  * @LastEditors: lxd
- * @LastEditTime: 2020-11-24 17:23:59
+ * @LastEditTime: 2020-11-25 11:51:47
  */
 import React, { useState } from 'react'
 import { Menu } from 'antd'
@@ -14,24 +14,14 @@ import {
 } from '@ant-design/icons'
 
 const { SubMenu } = Menu
-const rootSubmenuKeys = ['sub1', 'sub2', 'sub4']
-function Nav() {
-  const [openKeys, setOpenKeys] = useState(['sub1'])
 
-  const onOpenChange = keys => {
-    const latestOpenKey = keys.find(key => openKeys.indexOf(key) === -1)
-    if (rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
-      setOpenKeys(keys)
-    } else {
-      setOpenKeys(latestOpenKey ? [latestOpenKey] : [])
-    }
-  }
+function Nav() {
   return (
     <Menu
+      defaultSelectedKeys={['1']}
+      defaultOpenKeys={['sub1']}
       theme="dark"
       mode="inline"
-      openKeys={openKeys}
-      onOpenChange={onOpenChange}
     >
       <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
         <Menu.Item key="1">Option 1</Menu.Item>
