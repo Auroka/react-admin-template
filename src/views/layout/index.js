@@ -3,7 +3,7 @@
  * @Author: lxd
  * @Date: 2020-11-24 15:38:39
  * @LastEditors: lxd
- * @LastEditTime: 2020-11-25 16:17:59
+ * @LastEditTime: 2020-11-25 17:10:43
  */
 import React, { useState } from 'react'
 import './index.css'
@@ -25,7 +25,7 @@ function Layouts(props) {
         breakpoint="md"
         collapsed={collapsed}
       >
-        <div className="site-layout-logo">我是logo</div>
+        <div className="site-layout-logo">logo</div>
         <Nav></Nav>
       </Sider>
       <Layout>
