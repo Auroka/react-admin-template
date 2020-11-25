@@ -23,3 +23,7 @@
 .site-layout-content {
   padding: 20px;
 }
+.site-breadcrumb {
+  display: inline-block;
+  margin-left: 24px;
+}

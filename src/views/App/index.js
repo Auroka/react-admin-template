@@ -3,11 +3,11 @@
  * @Author: lxd
  * @Date: 2020-11-24 15:38:39
  * @LastEditors: lxd
- * @LastEditTime: 2020-11-24 17:01:11
+ * @LastEditTime: 2020-11-24 17:31:35
  */
 import React, { useState } from 'react'
 import './index.css'
-import { Layout } from 'antd'
+import { Layout, Breadcrumb } from 'antd'
 import Nav from './nav'
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons'
 const { Header, Sider, Content } = Layout
@@ -37,6 +37,16 @@ function App() {
               onClick: toggle
             }
           )}
+          <Breadcrumb className="site-breadcrumb">
+            <Breadcrumb.Item>Home</Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <a href="">Application Center</a>
+            </Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <a href="">Application List</a>
+            </Breadcrumb.Item>
+            <Breadcrumb.Item>An Application</Breadcrumb.Item>
+          </Breadcrumb>
         </Header>
         <Content className="site-layout-content">Content111</Content>
       </Layout>
