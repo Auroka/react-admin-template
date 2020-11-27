@@ -17,6 +17,7 @@
   height: 50px;
   padding: 0 20px;
   background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
 }
 .trigger {
   font-size: 18px;
@@ -25,7 +26,9 @@
   color: #1890ff;
 }
 .site-layout-content {
+  height: calc(100vh - 50px);
   padding: 20px;
+  overflow-y: auto;
 }
 .site-breadcrumb {
   display: inline-block;
