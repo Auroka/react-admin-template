@@ -23,7 +23,6 @@ const { SubMenu } = Menu
 
 function Nav() {
   const state = useLocation().state || {}
-  console.log('state:', state)
   return (
     <Menu
       defaultSelectedKeys={state.selectdKeys || ['home']}
