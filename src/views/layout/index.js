@@ -3,7 +3,7 @@
  * @Author: lxd
  * @Date: 2020-11-24 15:38:39
  * @LastEditors: lxd
- * @LastEditTime: 2020-11-30 11:22:56
+ * @LastEditTime: 2020-12-02 11:38:46
  */
 import React, { useState } from 'react'
 import './index.css'
@@ -11,6 +11,7 @@ import { Layout, Breadcrumb } from 'antd'
 import { useLocation } from 'react-router-dom'
 import Nav from './nav'
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons'
+
 const { Header, Sider, Content } = Layout
 
 function Layouts(props) {
@@ -22,7 +23,6 @@ function Layouts(props) {
 
   const state = useLocation().state || {}
   const breadcrumb = state.breadcrumb || []
-  console.log('breadcrumb', breadcrumb)
   return (
     <Layout>
       <Sider
@@ -43,8 +43,8 @@ function Layouts(props) {
             }
           )}
           <Breadcrumb className="site-breadcrumb">
-            {breadcrumb.map(item => {
-              return <Breadcrumb.Item>{item}</Breadcrumb.Item>
+            {breadcrumb.map((item, index) => {
+              return <Breadcrumb.Item key={index}>{item}</Breadcrumb.Item>
             })}
           </Breadcrumb>
         </Header>
