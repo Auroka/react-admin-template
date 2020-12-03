@@ -1,4 +1,13 @@
 .header-right {
+  display: flex;
+  flex-direction: row-reverse;
   flex: 1;
-  text-align: right;
+}
+.header-item {
+  padding: 0 12px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.header-item:hover {
+  background-color: rgba(0, 0, 0, 0.025);
 }

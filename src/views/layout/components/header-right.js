@@ -3,12 +3,16 @@
  * @Author: lxd
  * @Date: 2020-12-02 11:15:11
  * @LastEditors: lxd
- * @LastEditTime: 2020-12-02 11:34:51
+ * @LastEditTime: 2020-12-03 14:32:13
  */
 import React, { useState } from 'react'
 import screenfull from 'screenfull'
 import './header-right.css'
-import { FullscreenExitOutlined, FullscreenOutlined } from '@ant-design/icons'
+import {
+  FullscreenExitOutlined,
+  FullscreenOutlined,
+  LogoutOutlined
+} from '@ant-design/icons'
 function HeaderRight() {
   // 全屏功能
   const [full, setFull] = useState(false)
@@ -29,11 +33,23 @@ function HeaderRight() {
   }
   return (
     <div className="header-right">
-      {React.createElement(full ? FullscreenExitOutlined : FullscreenOutlined, {
-        key: 'screenfull',
-        className: 'screenfull',
-        onClick: onFull
-      })}
+      <span className="header-item" title="退出">
+        <LogoutOutlined />
+      </span>
+      <span className="header-item">角色名</span>
+      <span
+        className="header-item"
+        title={full ? '缩小' : '全屏'}
+        onClick={onFull}
+      >
+        {React.createElement(
+          full ? FullscreenExitOutlined : FullscreenOutlined,
+          {
+            key: 'screenfull',
+            className: 'screenfull'
+          }
+        )}
+      </span>
     </div>
   )
 }

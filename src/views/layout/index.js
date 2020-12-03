@@ -3,7 +3,7 @@
  * @Author: lxd
  * @Date: 2020-11-24 15:38:39
  * @LastEditors: lxd
- * @LastEditTime: 2020-12-02 11:38:46
+ * @LastEditTime: 2020-12-02 11:40:04
  */
 import React, { useState } from 'react'
 import './index.css'
@@ -11,6 +11,7 @@ import { Layout, Breadcrumb } from 'antd'
 import { useLocation } from 'react-router-dom'
 import Nav from './nav'
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons'
+import HeaderRight from './components/header-right'
 
 const { Header, Sider, Content } = Layout
 
@@ -47,6 +48,7 @@ function Layouts(props) {
               return <Breadcrumb.Item key={index}>{item}</Breadcrumb.Item>
             })}
           </Breadcrumb>
+          <HeaderRight></HeaderRight>
         </Header>
         <Content className="site-layout-content">{props.children}</Content>
       </Layout>
