@@ -3,7 +3,7 @@
  * @Author: lxd
  * @Date: 2020-11-24 16:08:14
  * @LastEditors: lxd
- * @LastEditTime: 2020-11-30 11:23:27
+ * @LastEditTime: 2020-12-04 09:43:59
  */
 import { Menu } from 'antd'
 import { Link, useLocation } from 'react-router-dom'
@@ -58,8 +58,21 @@ function Nav() {
           酷炫按钮
         </Link>
       </Menu.Item>
-      <SubMenu key="sub1" icon={<AppstoreOutlined />} title="组件">
-        <Menu.Item key="1">大搜狐啊</Menu.Item>
+      <SubMenu key="components" icon={<AppstoreOutlined />} title="组件">
+        <Menu.Item key="image">
+          <Link
+            to={{
+              pathname: '/components/image',
+              state: {
+                selectdKeys: ['image'],
+                openKeys: ['components', 'image'],
+                breadcrumb: ['组件', '图片']
+              }
+            }}
+          >
+            图片
+          </Link>
+        </Menu.Item>
       </SubMenu>
       <SubMenu key="menu" icon={<MenuOutlined />} title="路由嵌套">
         <Menu.Item key="/menu1">
